@@ -24,7 +24,7 @@ root.geometry("400x200")
 
 entry_var = tk.StringVar()
 
-entry = tk.Entry(root, textvariable=entry_var, font=("Arial",20), bd=10, insertwidth=2, width=15,borderwidth=4)
+entry = tk.Entry(root, textvariable=entry_var, font=("Arial",20), bd=10,bg="white", insertwidth=2, width=15,borderwidth=4)
 entry.grid(row=0,column=0,columnspan=4)
 
 buttons = [
@@ -38,15 +38,15 @@ buttons = [
 
 for (text,row,col) in buttons:
     if text == '=':
-        btn = tk.Button(root, text=text, padx=20,pady=20,font=('Arial',18), command=equalpress)
+        btn = tk.Button(root, text=text, padx=20,pady=20,bg="lightpink",font=('Arial',18), command=equalpress)
 
     elif text == 'c':
-        btn = tk.Button(root, text=text, padx=64,pady=20,font=('Arial',16), command=clear)
+        btn = tk.Button(root, text=text, padx=64,pady=20,bg="lavender",font=('Arial',16), command=clear)
         btn.grid(row=row,column=col,columnspan=3)
         continue
 
     else:
-        btn = tk.Button(root, text=text, padx=20,pady=20,font=('Arial',18), command=lambda t=text: press(t))
+        btn = tk.Button(root, text=text, padx=20,pady=20,bg="skyblue",font=('Arial',18), command=lambda t=text: press(t))
     btn.grid(row=row,column=col)
 
 
